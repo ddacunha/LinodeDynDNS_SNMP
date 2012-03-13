@@ -4,9 +4,9 @@ require 'highline/import'
 include SNMP
 
 APIKEY = 'abcdefghijklmnopqrstuvwxyz' # API Key can be generated from Linode.com
-SNMPHOSTNAME = '172.16.1.1' 			    # ip address of the SNMP enabled router (e.g.: Airport Express)
-DOMAIN = 'mydomain.com'       			  # domain name as per Linode record
-RESOURCE = 'home'       				      # resource to update (e.g.: home for 'home.mydomain.com')
+SNMPHOSTNAME = '172.16.1.1' # ip address of the SNMP enabled router (e.g.: Airport Express)
+DOMAIN = 'mydomain.com' # domain name as per Linode record
+RESOURCE = 'home' # resource to update (e.g.: home for 'home.mydomain.com')
 
 
 IPFILTEROUT = [  "10",  "127",  "169",  "172",  "192"]
