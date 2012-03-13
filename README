@@ -9,4 +9,7 @@ RESOURCE = 'home'                     # resource to update (e.g.: home for 'home
 
 I let you decide how to schedule the update.
 
+Note, to enable SNMP on Airport Extrem install Airport Utility 5.6 from Apple:
+http://support.apple.com/kb/DL1482?viewlocale=en_US&locale=en_US
+
 For customers of Linode that use the Linode DNS manager.  Released into the public domain.
