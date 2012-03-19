@@ -3,13 +3,13 @@ require 'snmp'
 require 'highline/import'
 include SNMP
 
-APIKEY = 'abcdefghijklmnopqrstuvwxyz' # API Key can be generated from Linode.com
-SNMPHOSTNAME = '172.16.1.1' # ip address of the SNMP enabled router (e.g.: Airport Express)
-DOMAIN = 'mydomain.com' # domain name as per Linode record
+APIKEY = 'euVBaXfgxbZbnObYj7mfMJu6fiAvAHE4kH6t9kGYFlBlP1AmsNEMBMosKU5WjcW9' # API Key can be generated from Linode.com
+SNMPHOSTNAME = '10.0.2.1' # ip address of the SNMP enabled router (e.g.: Airport Express)
+DOMAIN = 'ddc.im' # domain name as per Linode record
 RESOURCE = 'home' # resource to update (e.g.: home for 'home.mydomain.com')
 
 
-IPFILTEROUT = [  "10",  "127",  "169",  "172",  "192"]
+IPFILTEROUT = [  "10.",  "127",  "169",  "172",  "192"]
 
 l = Linode.new api_key: APIKEY
 
@@ -34,6 +34,7 @@ while next_oid.subtree_of?(start_oid)
   break if EndOfMibView == varbind.value
   next_oid = varbind.name
   ip = varbind.value.to_s
+  puts ip
   if ( (IPFILTEROUT.index(ip[0,3]).nil? == true)  && ( /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/ =~ ip))
     ip_list << ip
   end
