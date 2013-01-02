@@ -9,7 +9,7 @@ DOMAIN = 'mydomain.com' # domain name as per Linode record
 RESOURCE = 'home' # resource to update (e.g.: home for 'home.mydomain.com')
 
 
-IPFILTEROUT = [  "10",  "127",  "169",  "172",  "192"]
+IPFILTEROUT = [  "10.",  "127",  "169",  "172",  "192"]
 
 l = Linode.new api_key: APIKEY
 
